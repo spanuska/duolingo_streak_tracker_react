@@ -3,3 +3,5 @@ var StreakGroupsPanel = React.createClass({
   	return (<div>{this.props.message}</div>);
   }
 });
+
+module.exports = { component: StreakGroupsPanel };
