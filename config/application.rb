@@ -25,5 +25,8 @@ module Dst2
     config.generators do |g|
         g.test_framework :rspec
     end
+    config.react.variant = :production
+    config.react.addons = true
+    config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
   end
 end
