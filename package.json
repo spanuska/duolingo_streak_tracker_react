@@ -4,24 +4,36 @@
     "browserify": "~>6.3",
     "browserify-incremental": "^1.4.0",
     "reactify": "^0.17.1",
-    "react": "^0.12.0",
-		"react-tools": "^0.12.1",
-		"jest-cli": "^0.5.4"
+    "react": "^0.13.0",
+    "react-tools": "^0.12.1",
+    "jest-cli": "^0.5.4"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node ./node_modules/jest-cli/bin/jest.js"
+    "test": "node ./node_modules/jest-cli/bin/jest.js",
+    "testdbg": "node-debug --nodejs --harmony node_modules/.bin/jest --runInBand"
   },
   "jest": {
     "rootDir": "./app/assets/javascripts/components",
     "scriptPreprocessor": "<rootDir>/__tests__/preprocessor.js",
-    "moduleFileExtensions": [ "js", "jsx"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
     "unmockedModulePathPatterns": [
       "react"
     ],
-    "testFileExtensions": ["js", "jsx"],
-    "testPathIgnorePatterns": [ "preprocessor.js" ]
+    "testFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testPathIgnorePatterns": [
+      "preprocessor.js"
+    ]
+  },
+  "dependencies": {
+    "react": "^0.13.3"
   }
 }
